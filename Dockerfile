@@ -22,3 +22,4 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "Gym404.dll"]
+CMD ["--urls=http://*:9616"]
