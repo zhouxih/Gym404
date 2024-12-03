@@ -1,4 +1,6 @@
 
+using Gym404Helper.Configuration;
+
 namespace Gym404
 {
     public class Program
@@ -7,7 +9,8 @@ namespace Gym404
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
+            //添加配置文件类
+            builder.Services.AddSingleton(new AppSettings(builder.Configuration));
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
