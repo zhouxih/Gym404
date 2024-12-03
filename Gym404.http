@@ -1,0 +1,6 @@
+@Gym404_HostAddress = http://localhost:5199
+
+GET {{Gym404_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
